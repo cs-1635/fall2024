@@ -48,17 +48,18 @@ class OpenPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint1 = Paint()
-      ..color = Colors.grey
+      ..color = Colors.green
       ..style = PaintingStyle.fill;
     canvas.drawCircle(const Offset(200, 200), 100, paint1);
 
     var paint2 = Paint()
-      ..color = Colors.black
+      ..color = Colors.blue
       ..strokeWidth = 20;
-    canvas.drawCircle(const Offset(200, 200), 60, paint1);
+
+
     //canvas.drawLine(Offset(0,0), Offset(200,200), paint2);
     canvas.drawCircle(const Offset(200, 200), 80, paint2);
-
+    canvas.drawCircle(const Offset(200, 200), 60, paint1);
 
     canvas.drawCircle(const Offset(200, 200), 40, paint2);
     canvas.drawCircle(const Offset(200, 200), 20, paint1);
