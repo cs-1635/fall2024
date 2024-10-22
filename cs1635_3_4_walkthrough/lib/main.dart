@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:mvvm_example_with_provider/view/list_pictures_view.dart';
 import 'package:mvvm_example_with_provider/view_model/list_pictures_view_model.dart';
 
@@ -14,10 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoApp(
+    return  CupertinoApp(
         debugShowCheckedModeBanner: true,
         title: 'Random Photo Gallery',
         theme: CupertinoThemeData(),
+
+        home: ChangeNotifierProvider(
+          create: (context) => ListPicturesViewModel(),
+          child: PictureListView(),
+        )
 
 
     );
